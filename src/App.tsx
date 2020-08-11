@@ -45,7 +45,7 @@ const Game: React.FC = () => {
       calculateWinner(tempBoard);
       setMoveNumber(moveNumber + 1);
       setHistory([...history, tempHistoryMove]);
-      axios.put(`http://tutorial.tylerkoistinen.com/game1/`, tempHistoryMove);
+      axios.put(`https://tutorial.tylerkoistinen.com/game1/`, tempHistoryMove);
     }
   };
 
@@ -82,7 +82,7 @@ const Game: React.FC = () => {
 
   const serverUpdateClick = async () => {
     let returnedData = await axios.get(
-      `http://tutorial.tylerkoistinen.com/game1/`
+      `https://tutorial.tylerkoistinen.com/game1/`
     );
     let newMove: historyMove = returnedData.data;
 
